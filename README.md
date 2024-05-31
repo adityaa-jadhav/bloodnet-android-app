@@ -54,7 +54,11 @@ I got so many mails on about 'How to change Database link and Package Name'. So,
 
 # Contribution
 
-If you would like to contribute in this project, you are always welcome. There is no `code` avilable in the `master` branch.
+I have contributed in this project by creating some new modules and changes:
+1) Nearby Blood drives
+2) Rewards for donors
+3) It was originally designed for Bangladesh users but i changes it and maked it available for Indian users.
+4) Modified some of the UI elements.
 
 
 Thanks
