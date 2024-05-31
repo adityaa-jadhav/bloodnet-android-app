@@ -93,7 +93,6 @@ public class PostActivity extends AppCompatActivity {
 
         Time +=min;
         Time +=(" "+ampm);
-
         Date = day+"/"+month+"/"+year;
 
         FirebaseUser cur_user = mAuth.getInstance().getCurrentUser();

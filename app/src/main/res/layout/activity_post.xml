@@ -24,7 +24,9 @@
                 android:padding="5dp"
                 android:text="Contact:"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
             <EditText
                 android:id="@+id/getMobile"
                 android:padding="5dp"
@@ -43,6 +45,8 @@
             <TextView
                 android:padding="5dp"
                 android:text="Location:"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
@@ -63,6 +67,8 @@
             <TextView
                 android:padding="5dp"
                 android:text="@string/BloodGroup"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Spinner
@@ -82,6 +88,8 @@
             <TextView
                 android:padding="5dp"
                 android:text="@string/Division"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Spinner
@@ -99,7 +107,9 @@
             android:gravity="center"
             android:id="@+id/postbtn"
             android:text="@string/Post"
-            android:backgroundTint="@color/primary_dark"
+            android:backgroundTint="#F8F8F8"
+            android:textColor="#d50000"
+            android:textStyle="bold"
             android:background="@drawable/signin_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

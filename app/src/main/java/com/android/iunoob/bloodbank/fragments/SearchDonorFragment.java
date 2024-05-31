@@ -32,12 +32,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-/***
- Project Name: BloodBank
- Project Date: 10/14/18
- Created by: imshakil
- Email: mhshakil_ice_iu@yahoo.com
- ***/
 
 public class SearchDonorFragment extends Fragment {
 
@@ -99,8 +93,7 @@ public class SearchDonorFragment extends Fragment {
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
                 recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
                 recyclerView.setAdapter(sdadapter);
-                Query qpath  = db_ref.child(division.getSelectedItem().toString())
-                        .child(bloodgroup.getSelectedItem().toString());
+                Query qpath  = db_ref.child(division.getSelectedItem().toString()).child(bloodgroup.getSelectedItem().toString());
                 qpath.addListenerForSingleValueEvent(new ValueEventListener() {
                    @Override
                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -116,7 +109,7 @@ public class SearchDonorFragment extends Fragment {
                        else
                        {
 
-                           Toast.makeText(getActivity(), "Database is empty now!",
+                           Toast.makeText(getActivity(), "No Donor's Found!",
                                    Toast.LENGTH_LONG).show();
 
                        }

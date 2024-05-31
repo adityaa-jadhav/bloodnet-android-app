@@ -22,7 +22,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
-                android:text="Choose Blood Group:" />
+                android:text="Choose Blood Group:"
+                android:textStyle="bold"
+                android:textColor="#ffffff"/>
 
             <Spinner
                 android:id="@+id/btngetBloodGroup"
@@ -43,7 +45,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
-                android:text="Choose your Division:" />
+                android:text="Choose State:"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
 
             <Spinner
                 android:id="@+id/btngetDivison"
@@ -57,7 +61,8 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:text="Search"
-            android:backgroundTint="@color/primary_dark"
+            android:textColor="#d20000"
+            android:backgroundTint="#FFFFFF"
             android:background="@drawable/signin_btn"
             android:id="@+id/btnSearch"
             android:layout_width="wrap_content"

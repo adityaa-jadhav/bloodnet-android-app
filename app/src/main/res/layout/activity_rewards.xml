@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Rewards"
+    tools:ignore="SpeakableTextPresentCheck"
+    android:background="@drawable/red_button_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Total Donate TextView -->
+
+        <TextView
+            android:id="@+id/totaldonate"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Total Donate:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- GridLayout for CardViews -->
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="80dp"
+            app:columnCount="2"
+            app:rowCount="4">
+
+            <!-- Add CardViews here -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard1"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="0"
+                app:layout_gravity="center"
+                app:layout_row="0">
+
+                <ImageView
+                    android:id="@+id/logo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mcd_round">
+
+                </ImageView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard2"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="1"
+                app:layout_gravity="center"
+                app:layout_row="0">
+
+                <ImageView
+                    android:id="@+id/logo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/boat_round">
+
+                </ImageView>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard3"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="0"
+                app:layout_gravity="center"
+                app:layout_row="1">
+
+                <ImageView
+                    android:id="@+id/logo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fasttrackk">
+
+                </ImageView>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard4"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="1"
+                app:layout_gravity="center"
+                app:layout_row="1">
+
+                <ImageView
+                    android:id="@+id/logo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zomato_round">
+                </ImageView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard5"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="0"
+                app:layout_gravity="center"
+                app:layout_row="2">
+
+                <ImageView
+                    android:id="@+id/logo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/spotify_round">
+                </ImageView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard6"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="1"
+                app:layout_gravity="center"
+                app:layout_row="2">
+
+                <ImageView
+                    android:id="@+id/logo6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/lenskart_round">
+                </ImageView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard7"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="0"
+                app:layout_gravity="center"
+                app:layout_row="3">
+
+                <ImageView
+                    android:id="@+id/logo7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zepto_round">
+                </ImageView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/imageCard8"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_column="1"
+                app:layout_gravity="center"
+                app:layout_row="3">
+
+                <ImageView
+                    android:id="@+id/logo8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/swiggy_round">
+                </ImageView>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
+</ScrollView>

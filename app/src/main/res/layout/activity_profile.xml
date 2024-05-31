@@ -21,10 +21,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="?attr/actionBarSize"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/circle"
             android:src="@mipmap/blood_bank_icon_round" />
 
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Blood Net"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="italic" />
 
         <LinearLayout
             android:padding="3dp"
@@ -34,7 +44,9 @@
             <TextView
                 android:text="Name:"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
             <EditText
                 android:layout_marginLeft="52dp"
                 android:id="@+id/input_fullName"
@@ -53,7 +65,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sex:" />
+                android:text="Sex:"
+                android:textStyle="bold"
+                android:textColor="#ffffff" />
 
             <Spinner
                 android:layout_marginLeft="67dp"
@@ -74,7 +88,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Blood Group:" />
+                android:text="Blood Group:"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
 
             <Spinner
                 android:layout_marginLeft="13dp"
@@ -94,7 +110,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contact No:" />
+            android:text="Contact No:"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
         <EditText
             android:layout_marginLeft="20dp"
             android:id="@+id/inputMobile"
@@ -113,13 +131,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Address:" />
+            android:text="City:"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
         <EditText
             android:layout_marginLeft="40dp"
             android:id="@+id/inputAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/userAddress"
+            android:hint="Select City"
             android:inputType="text"
             android:textColor="@android:color/white" />
     </LinearLayout>
@@ -133,7 +153,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Division:" />
+                android:text="State:"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
 
             <Spinner
                 android:layout_marginLeft="42dp"
@@ -171,6 +193,8 @@
         <CheckBox
             android:id="@+id/checkbox"
             android:text="Mark this to be a donor"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -184,7 +208,8 @@
             android:background="@drawable/signin_btn"
             android:text="@string/signup"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.iunoob.bloodbank.R;
 import com.android.iunoob.bloodbank.fragments.AboutUs;
@@ -24,6 +25,7 @@ import com.android.iunoob.bloodbank.fragments.AchievmentsView;
 import com.android.iunoob.bloodbank.fragments.BloodInfo;
 import com.android.iunoob.bloodbank.fragments.HomeView;
 import com.android.iunoob.bloodbank.fragments.NearByHospitalActivity;
+import com.android.iunoob.bloodbank.fragments.Rewards;
 import com.android.iunoob.bloodbank.fragments.SearchDonorFragment;
 import com.android.iunoob.bloodbank.viewmodels.UserData;
 import com.google.firebase.auth.FirebaseAuth;
@@ -157,6 +159,8 @@ public class Dashboard extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -183,13 +187,54 @@ public class Dashboard extends AppCompatActivity
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, new SearchDonorFragment()).commit();
 
-        } else if (id == R.id.nearby_hospital) {
+        } /*else if (id == R.id.nearby_hospital) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, new NearByHospitalActivity()).commit();
+
+        } */
+
+        else if (id == R.id.nearby_hospital) {
+            isUserFromMaharashtra();
+            if (isUserFromMaharashtra()) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, new NearByHospitalActivity()).commit();
+            } else {
+                // Optionally, you can show a message or take other action here
+                Toast.makeText(getApplicationContext(), "Upcoming Drives are only available for users from Mumbai, Maharashtra.", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        else if (id == R.id.rewards) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, new Rewards()).commit();
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    private boolean isUserFromMaharashtra() {
+        DatabaseReference currentUserRef = userdb_ref.child(cur_user.getUid());
+        currentUserRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String userLocation = dataSnapshot.child("location").getValue(String.class);
+                if (userLocation != null && userLocation.equalsIgnoreCase("Maharashtra")) {
+                    // User is from Maharashtra
+                    // Show NearbyHospitalActivity
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, new NearByHospitalActivity()).commit();
+                } else {
+                    // User is not from Maharashtra
+                    // Show a message or take other action here
+                    Toast.makeText(getApplicationContext(), "Upcoming Blood Drives are only available for users from Mumbai, Maharashtra.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.d("User", databaseError.getMessage());
+                // Handle any errors if needed
+            }
+        });
         return true;
     }
 

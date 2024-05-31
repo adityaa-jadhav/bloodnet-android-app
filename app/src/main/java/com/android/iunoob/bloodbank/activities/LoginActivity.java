@@ -43,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
 
-
         inputemail = findViewById(R.id.input_username);
         inputpassword = findViewById(R.id.input_password);
 
@@ -106,8 +105,5 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
-
 }

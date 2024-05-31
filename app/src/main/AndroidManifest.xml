@@ -17,10 +17,42 @@
         android:roundIcon="@mipmap/blood_bank_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".coupons.SwiggyinstamartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.ZeptoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.LenskartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.SpotifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.ZomatoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.FasttrackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.BoatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coupons.McD"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.Rewards"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <activity
             android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login" />

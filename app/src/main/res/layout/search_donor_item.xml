@@ -27,7 +27,9 @@
                 android:id="@+id/donorName"
                 android:text="Name: Alamin Hossain"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#ffffff"/>
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -35,10 +37,14 @@
                 <TextView
                     android:text="Contact: "
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
                 <TextView
                     android:id="@+id/donorContact"
                     android:text="+8801234567890"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -46,17 +52,23 @@
             <TextView
                 android:id="@+id/donorAddress"
                 android:text="Address: Kushtia"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/totaldonate"
                 android:text="Total Donation: 0 times"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/lastdonate"
                 android:text="Last Donation: not yet donated!"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
